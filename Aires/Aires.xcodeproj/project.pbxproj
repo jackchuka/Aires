@@ -21,6 +21,11 @@
 		811CE6E31CCBC54400F64E25 /* DebugMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 811CE6E21CCBC54400F64E25 /* DebugMapViewController.swift */; };
 		811CE6E51CCBC54C00F64E25 /* DebugMapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 811CE6E41CCBC54C00F64E25 /* DebugMapViewController.xib */; };
 		811CE6E71CCBCE2E00F64E25 /* CardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 811CE6E61CCBCE2E00F64E25 /* CardCell.swift */; };
+		811CE6E91CCBDEDB00F64E25 /* CardCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 811CE6E81CCBDEDB00F64E25 /* CardCell.xib */; };
+		811CE6EB1CCBE3D100F64E25 /* MapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 811CE6EA1CCBE3D100F64E25 /* MapVC.swift */; };
+		811CE6ED1CCBE5D500F64E25 /* Pin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 811CE6EC1CCBE5D500F64E25 /* Pin.swift */; };
+		811CE6EF1CCBF5BE00F64E25 /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 811CE6EE1CCBF5BE00F64E25 /* ProfileVC.swift */; };
+		811CE6F11CCBFEC100F64E25 /* GraphsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 811CE6F01CCBFEC100F64E25 /* GraphsVC.swift */; };
 		F98BDAE94231F1D85277FB1A /* Pods_Aires.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F81DFE25522A4AFD54A70E05 /* Pods_Aires.framework */; };
 /* End PBXBuildFile section */
 
@@ -42,6 +47,11 @@
 		811CE6E21CCBC54400F64E25 /* DebugMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DebugMapViewController.swift; sourceTree = "<group>"; };
 		811CE6E41CCBC54C00F64E25 /* DebugMapViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DebugMapViewController.xib; sourceTree = "<group>"; };
 		811CE6E61CCBCE2E00F64E25 /* CardCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardCell.swift; sourceTree = "<group>"; };
+		811CE6E81CCBDEDB00F64E25 /* CardCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CardCell.xib; sourceTree = "<group>"; };
+		811CE6EA1CCBE3D100F64E25 /* MapVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapVC.swift; sourceTree = "<group>"; };
+		811CE6EC1CCBE5D500F64E25 /* Pin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pin.swift; sourceTree = "<group>"; };
+		811CE6EE1CCBF5BE00F64E25 /* ProfileVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
+		811CE6F01CCBFEC100F64E25 /* GraphsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GraphsVC.swift; path = ../GraphsVC.swift; sourceTree = "<group>"; };
 		F569DEFE2A0F184E9A557D40 /* Pods-Aires.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Aires.release.xcconfig"; path = "Pods/Target Support Files/Pods-Aires/Pods-Aires.release.xcconfig"; sourceTree = "<group>"; };
 		F81DFE25522A4AFD54A70E05 /* Pods_Aires.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Aires.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -93,7 +103,11 @@
 				811CE6C51CCB3D9C00F64E25 /* ViewController.swift */,
 				811CE6E41CCBC54C00F64E25 /* DebugMapViewController.xib */,
 				811CE6C71CCB3D9C00F64E25 /* Main.storyboard */,
+				811CE6EA1CCBE3D100F64E25 /* MapVC.swift */,
+				811CE6EC1CCBE5D500F64E25 /* Pin.swift */,
 				811CE6E61CCBCE2E00F64E25 /* CardCell.swift */,
+				811CE6E81CCBDEDB00F64E25 /* CardCell.xib */,
+				811CE6EE1CCBF5BE00F64E25 /* ProfileVC.swift */,
 				811CE6CA1CCB3D9C00F64E25 /* Assets.xcassets */,
 				811CE6CC1CCB3D9C00F64E25 /* LaunchScreen.storyboard */,
 				811CE6CF1CCB3D9C00F64E25 /* Info.plist */,
@@ -104,6 +118,7 @@
 		811CE6E11CCBC4D700F64E25 /* AR */ = {
 			isa = PBXGroup;
 			children = (
+				811CE6F01CCBFEC100F64E25 /* GraphsVC.swift */,
 				811CE6E21CCBC54400F64E25 /* DebugMapViewController.swift */,
 				811CE6DB1CCBC4AC00F64E25 /* ARTrackingManager.swift */,
 				811CE6D71CCBC4A200F64E25 /* ARAnnotationView.swift */,
@@ -187,6 +202,7 @@
 				811CE6CE1CCB3D9C00F64E25 /* LaunchScreen.storyboard in Resources */,
 				811CE6CB1CCB3D9C00F64E25 /* Assets.xcassets in Resources */,
 				811CE6C91CCB3D9C00F64E25 /* Main.storyboard in Resources */,
+				811CE6E91CCBDEDB00F64E25 /* CardCell.xib in Resources */,
 				811CE6E51CCBC54C00F64E25 /* DebugMapViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -247,11 +263,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				811CE6DE1CCBC4B000F64E25 /* ARViewController.swift in Sources */,
+				811CE6F11CCBFEC100F64E25 /* GraphsVC.swift in Sources */,
 				811CE6E01CCBC4D100F64E25 /* TestAnnotationView.swift in Sources */,
 				811CE6C61CCB3D9C00F64E25 /* ViewController.swift in Sources */,
+				811CE6ED1CCBE5D500F64E25 /* Pin.swift in Sources */,
 				811CE6D61CCBC49E00F64E25 /* ARAnnotation.swift in Sources */,
 				811CE6D81CCBC4A200F64E25 /* ARAnnotationView.swift in Sources */,
+				811CE6EB1CCBE3D100F64E25 /* MapVC.swift in Sources */,
 				811CE6E71CCBCE2E00F64E25 /* CardCell.swift in Sources */,
+				811CE6EF1CCBF5BE00F64E25 /* ProfileVC.swift in Sources */,
 				811CE6DC1CCBC4AC00F64E25 /* ARTrackingManager.swift in Sources */,
 				811CE6DA1CCBC4A800F64E25 /* ARConfiguration.swift in Sources */,
 				811CE6E31CCBC54400F64E25 /* DebugMapViewController.swift in Sources */,

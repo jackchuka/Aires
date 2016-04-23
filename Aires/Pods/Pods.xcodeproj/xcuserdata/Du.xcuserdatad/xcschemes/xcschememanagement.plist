@@ -4,12 +4,12 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>AFNetworking.xcscheme</key>
+		<key>Pods-Aires.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-Aires.xcscheme</key>
+		<key>SwiftCharts.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -17,12 +17,12 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>4878C70B21CA37D7CB8A476BF986741B</key>
+		<key>62A3F4D0802377E5AD0A86EB01A3289D</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>D825BB2A5F6039083DADF69848A51541</key>
+		<key>D46268E42B1B636922A872B5BED80C23</key>
 		<dict>
 			<key>primary</key>
 			<true/>

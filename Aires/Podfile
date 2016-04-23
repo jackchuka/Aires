@@ -4,8 +4,7 @@
 use_frameworks!
 
 target 'Aires' do
-pod 'AerisWeather'
-pod 'AerisWeather/AerisUI'
-pod 'AerisWeather/AerisMap'
+    pod 'SwiftCharts', '~> 0.2'
+
 end
 

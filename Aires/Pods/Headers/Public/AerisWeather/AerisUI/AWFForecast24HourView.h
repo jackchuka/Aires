@@ -1,1 +1,0 @@
-../../../../AerisWeather/AerisWeatherSDK/AerisUI.framework/Versions/A/Headers/AWFForecast24HourView.h

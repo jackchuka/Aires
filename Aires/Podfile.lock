@@ -1,40 +1,10 @@
 PODS:
-  - AerisWeather (2.3.0):
-    - AerisWeather/Aeris (= 2.3.0)
-  - AerisWeather/Aeris (2.3.0):
-    - AFNetworking (~> 2.6)
-  - AerisWeather/AerisMap (2.3.0):
-    - AerisWeather/AerisUI
-  - AerisWeather/AerisUI (2.3.0)
-  - AFNetworking (2.6.3):
-    - AFNetworking/NSURLConnection (= 2.6.3)
-    - AFNetworking/NSURLSession (= 2.6.3)
-    - AFNetworking/Reachability (= 2.6.3)
-    - AFNetworking/Security (= 2.6.3)
-    - AFNetworking/Serialization (= 2.6.3)
-    - AFNetworking/UIKit (= 2.6.3)
-  - AFNetworking/NSURLConnection (2.6.3):
-    - AFNetworking/Reachability
-    - AFNetworking/Security
-    - AFNetworking/Serialization
-  - AFNetworking/NSURLSession (2.6.3):
-    - AFNetworking/Reachability
-    - AFNetworking/Security
-    - AFNetworking/Serialization
-  - AFNetworking/Reachability (2.6.3)
-  - AFNetworking/Security (2.6.3)
-  - AFNetworking/Serialization (2.6.3)
-  - AFNetworking/UIKit (2.6.3):
-    - AFNetworking/NSURLConnection
-    - AFNetworking/NSURLSession
+  - SwiftCharts (0.3)
 
 DEPENDENCIES:
-  - AerisWeather
-  - AerisWeather/AerisMap
-  - AerisWeather/AerisUI
+  - SwiftCharts (~> 0.2)
 
 SPEC CHECKSUMS:
-  AerisWeather: d357eadc9a70acbeb689d2e2b39199b42858e442
-  AFNetworking: cb8d14a848e831097108418f5d49217339d4eb60
+  SwiftCharts: c66a449d58f9c811c467f865a47b1b6136b49499
 
 COCOAPODS: 0.39.0
