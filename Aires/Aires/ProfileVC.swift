@@ -60,16 +60,14 @@ class ProfileVC: UIViewController {
         let cell : CardCell = tableView.dequeueReusableCellWithIdentifier("cell") as! CardCell
         // Configure the cell...
         
-        print(indexPath.row)
-        print(self.json)
+        // TODO: find worst symptom and disply
         
-        let cough = self.json[indexPath.row]["cough"].rawString()
-        print (cough)
+        let cough = self.json[indexPath.row]["cough"].rawString()!
         cell.symptomname.text = "Cough"
         cell.symptomname.textColor = UIColor.blueColor()
-        cell.rating.text = "Rating of \(self.json[indexPath.row]["cough"]) out of 10"
-        cell.date.text = self.json[indexPath.row]["datetime"].rawString()
-        //cell.coord.text = "\(self.json[indexPath.row]["latitude"].rawString()!) : \(self.json[indexPath.row]["longitude"].rawString()!)"
+        cell.rating.text = "Rating of \(cough) out of 10"
+        cell.date.text = self.json[indexPath.row]["datetime"].rawString()!
+        cell.location.text = "\(self.json[indexPath.row]["latitude"].rawString()!) : \(self.json[indexPath.row]["longitude"].rawString()!)"
         return cell
         
     }
