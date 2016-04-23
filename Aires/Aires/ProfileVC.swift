@@ -81,7 +81,12 @@ class ProfileVC: UIViewController {
     }
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
-        let vc: SelectionVC = segue.destinationViewController as! SelectionVC
+        if(segue.identifier == "detail"){
+            let vc: DetailVC = segue.destinationViewController as! DetailVC
+        }else{
+            let vc: SelectionVC = segue.destinationViewController as! SelectionVC
+
+        }
         //vc.descriptext = descriptionsarray[currentindex]
         
     }
