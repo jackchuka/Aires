@@ -11,31 +11,36 @@ import Alamofire
 
 
 class ProfileVC: UIViewController {
+    
     let url = "http://masanoriuehara.com/api/aircheck/";
     
     let types = ["Cough", "Wheezing", "Sneezing", "Itchy Eyes"]
     let colors = []
+    var json = JSON([]);
+    
     @IBOutlet weak var tableview: UITableView!
+    
     override func viewDidLoad() {
         self.tableview.registerNib(UINib(nibName: "CardCell", bundle: nil), forCellReuseIdentifier: "cell")
-        
+    
         let params = [
             "user_id" : 1,
-            "func" : "userTimeline"
+            "func" : "timeline"
         ];
         
         Alamofire.request(.GET, url, parameters: params, encoding: ParameterEncoding.URL).responseJSON { (_, _, result) in
             switch result {
             case .Success(let data):
-                let json = JSON(data)
-                print(json)
+                self.json = JSON(data)
+                print(self.json)
+                self.tableview.reloadData()
             case .Failure(_, let error):
                 print("Request failed with error: \(error)")
             }
         }
-
-        
+    
     }
+    
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1
@@ -43,19 +48,28 @@ class ProfileVC: UIViewController {
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 4
+        return self.json.count
     }
+    
     func tableView(tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
         return 10
     }
+    
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        
         let cell : CardCell = tableView.dequeueReusableCellWithIdentifier("cell") as! CardCell
         // Configure the cell...
+        
+        print(indexPath.row)
+        print(self.json)
+        
+        let cough = self.json[indexPath.row]["cough"].rawString()
+        print (cough)
         cell.title.text = "Cough"
         cell.title.textColor = UIColor.blueColor()
-        cell.decrip.text = "Rating of 10 out of 10"
-        cell.date.text = "April"
-        cell.coord.text = "Irvine"
+        cell.decrip.text = "Rating of \(self.json[indexPath.row]["cough"]) out of 10"
+        cell.date.text = self.json[indexPath.row]["datetime"].rawString()
+        cell.coord.text = "\(self.json[indexPath.row]["latitude"].rawString()!) : \(self.json[indexPath.row]["longitude"].rawString()!)"
         
         return cell
         
