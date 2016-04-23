@@ -10,10 +10,10 @@ import Foundation
 import UIKit
 class CardCell: UITableViewCell{
     
-    @IBOutlet var title: UILabel!
-    @IBOutlet var decrip: UILabel!
+    @IBOutlet var rating: UILabel!
+    @IBOutlet var symptomname: UILabel!
     @IBOutlet var date: UILabel!
-    @IBOutlet var coord: UILabel!
+    @IBOutlet var location: UILabel!
 
     override func awakeFromNib() {
         super.awakeFromNib()

@@ -52,15 +52,29 @@ class ProfileVC: UIViewController {
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell : CardCell = tableView.dequeueReusableCellWithIdentifier("cell") as! CardCell
         // Configure the cell...
-        cell.title.text = "Cough"
-        cell.title.textColor = UIColor.blueColor()
-        cell.decrip.text = "Rating of 10 out of 10"
+        cell.symptomname.text = "Cough"
+        cell.symptomname.textColor = UIColor.blueColor()
+        cell.rating.text = "Rating of 10 out of 10"
         cell.date.text = "April"
-        cell.coord.text = "Irvine"
+        cell.location.text = "Irvine"
         
         return cell
         
     }
+   
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
+        self.performSegueWithIdentifier("detail", sender: self)
+        
+    }
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+        let vc: SelectionVC = segue.destinationViewController as! SelectionVC
+        //vc.descriptext = descriptionsarray[currentindex]
+        
+    }
+
+    
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         return 125.0
     }
@@ -85,7 +99,12 @@ class ProfileVC: UIViewController {
       
     }
 */
+    @IBAction func unwindToMap(segue: UIStoryboardSegue) {
+
+    }
     
+    
+
 
    
 }

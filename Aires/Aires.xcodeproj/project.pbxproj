@@ -30,6 +30,8 @@
 		811CE6F51CCC030200F64E25 /* ExamplesDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 811CE6F41CCC030200F64E25 /* ExamplesDefaults.swift */; };
 		811CE6F71CCC036C00F64E25 /* Env.swift in Sources */ = {isa = PBXBuildFile; fileRef = 811CE6F61CCC036C00F64E25 /* Env.swift */; };
 		811CE6F91CCC0EFB00F64E25 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 811CE6F81CCC0EFB00F64E25 /* SwiftyJSON.swift */; };
+		811CE6FC1CCC232600F64E25 /* DetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 811CE6FB1CCC232600F64E25 /* DetailVC.swift */; };
+		811CE6FE1CCC241200F64E25 /* SelectionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 811CE6FD1CCC241200F64E25 /* SelectionVC.swift */; };
 		F98BDAE94231F1D85277FB1A /* Pods_Aires.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F81DFE25522A4AFD54A70E05 /* Pods_Aires.framework */; };
 /* End PBXBuildFile section */
 
@@ -60,6 +62,8 @@
 		811CE6F41CCC030200F64E25 /* ExamplesDefaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExamplesDefaults.swift; sourceTree = "<group>"; };
 		811CE6F61CCC036C00F64E25 /* Env.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Env.swift; sourceTree = "<group>"; };
 		811CE6F81CCC0EFB00F64E25 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
+		811CE6FB1CCC232600F64E25 /* DetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailVC.swift; sourceTree = "<group>"; };
+		811CE6FD1CCC241200F64E25 /* SelectionVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectionVC.swift; sourceTree = "<group>"; };
 		F569DEFE2A0F184E9A557D40 /* Pods-Aires.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Aires.release.xcconfig"; path = "Pods/Target Support Files/Pods-Aires/Pods-Aires.release.xcconfig"; sourceTree = "<group>"; };
 		F81DFE25522A4AFD54A70E05 /* Pods_Aires.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Aires.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -111,11 +115,13 @@
 				811CE6FA1CCC116700F64E25 /* Graphs */,
 				811CE6C51CCB3D9C00F64E25 /* ViewController.swift */,
 				811CE6C71CCB3D9C00F64E25 /* Main.storyboard */,
+				811CE6FD1CCC241200F64E25 /* SelectionVC.swift */,
 				811CE6EA1CCBE3D100F64E25 /* MapVC.swift */,
 				811CE6EC1CCBE5D500F64E25 /* Pin.swift */,
 				811CE6E61CCBCE2E00F64E25 /* CardCell.swift */,
 				811CE6E81CCBDEDB00F64E25 /* CardCell.xib */,
 				811CE6EE1CCBF5BE00F64E25 /* ProfileVC.swift */,
+				811CE6FB1CCC232600F64E25 /* DetailVC.swift */,
 				811CE6F81CCC0EFB00F64E25 /* SwiftyJSON.swift */,
 				811CE6CA1CCB3D9C00F64E25 /* Assets.xcassets */,
 				811CE6CC1CCB3D9C00F64E25 /* LaunchScreen.storyboard */,
@@ -285,6 +291,7 @@
 				811CE6DE1CCBC4B000F64E25 /* ARViewController.swift in Sources */,
 				811CE6F71CCC036C00F64E25 /* Env.swift in Sources */,
 				811CE6F11CCBFEC100F64E25 /* GraphsVC.swift in Sources */,
+				811CE6FC1CCC232600F64E25 /* DetailVC.swift in Sources */,
 				811CE6E01CCBC4D100F64E25 /* TestAnnotationView.swift in Sources */,
 				811CE6C61CCB3D9C00F64E25 /* ViewController.swift in Sources */,
 				811CE6ED1CCBE5D500F64E25 /* Pin.swift in Sources */,
@@ -296,6 +303,7 @@
 				811CE6EF1CCBF5BE00F64E25 /* ProfileVC.swift in Sources */,
 				811CE6DC1CCBC4AC00F64E25 /* ARTrackingManager.swift in Sources */,
 				811CE6F31CCC02E300F64E25 /* BubbleExample.swift in Sources */,
+				811CE6FE1CCC241200F64E25 /* SelectionVC.swift in Sources */,
 				811CE6DA1CCBC4A800F64E25 /* ARConfiguration.swift in Sources */,
 				811CE6F91CCC0EFB00F64E25 /* SwiftyJSON.swift in Sources */,
 				811CE6E31CCBC54400F64E25 /* DebugMapViewController.swift in Sources */,
