@@ -1,10 +1,13 @@
 PODS:
+  - Alamofire (3.3.1)
   - SwiftCharts (0.3)
 
 DEPENDENCIES:
+  - Alamofire (~> 3.3)
   - SwiftCharts (~> 0.2)
 
 SPEC CHECKSUMS:
+  Alamofire: 369bc67b6f5ac33ded3648d7bd21c5bfb91c2ecc
   SwiftCharts: c66a449d58f9c811c467f865a47b1b6136b49499
 
 COCOAPODS: 0.39.0

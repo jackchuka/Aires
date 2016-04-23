@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Alamofire
+
 
 class ProfileVC: UIViewController {
     
@@ -15,6 +17,17 @@ class ProfileVC: UIViewController {
     @IBOutlet weak var tableview: UITableView!
     override func viewDidLoad() {
         self.tableview.registerNib(UINib(nibName: "CardCell", bundle: nil), forCellReuseIdentifier: "cell")
+        Alamofire.request(.GET, "https://httpbin.org/get", parameters: ["foo": "bar"])
+            .responseJSON { response in
+                print(response.request)  // original URL request
+                print(response.response) // URL response
+                print(response.data)     // server data
+                print(response.result)   // result of response serialization
+                
+                if let JSON = response.result.value {
+                    print("JSON: \(JSON)")
+                }
+        }
 
     }
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -33,15 +46,16 @@ class ProfileVC: UIViewController {
         let cell : CardCell = tableView.dequeueReusableCellWithIdentifier("cell") as! CardCell
         // Configure the cell...
         cell.title.text = "Cough"
+        cell.title.textColor = UIColor.blueColor()
         cell.decrip.text = "Rating of 10 out of 10"
         cell.date.text = "April"
         cell.coord.text = "Irvine"
-        cell.layer.borderColor = UIColor.blueColor().CGColor
+        
         return cell
         
     }
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        return 200.0
+        return 125.0
     }
    
 }

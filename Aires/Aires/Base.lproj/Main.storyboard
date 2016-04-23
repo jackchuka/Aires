@@ -100,9 +100,6 @@
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="l91-4K-Qp8">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                <variation key="widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="0.0" y="64" width="400" height="492"/>
-                                </variation>
                             </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -153,15 +150,16 @@
             </objects>
             <point key="canvasLocation" x="-406.5" y="-265"/>
         </scene>
-        <!--View Controller-->
+        <!--GraphsVC-->
         <scene sceneID="LTR-CU-f8b">
             <objects>
-                <viewController id="zOh-H5-m9Y" sceneMemberID="viewController">
+                <viewController id="zOh-H5-m9Y" customClass="GraphsVC" customModule="Aires" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Nrw-mN-yPW"/>
                         <viewControllerLayoutGuide type="bottom" id="EiW-uA-uoZ"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Bt8-kM-L6C">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
