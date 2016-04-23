@@ -106,14 +106,10 @@
 		811CE6C21CCB3D9C00F64E25 /* Aires */ = {
 			isa = PBXGroup;
 			children = (
-				811CE6E11CCBC4D700F64E25 /* AR */,
 				811CE6C31CCB3D9C00F64E25 /* AppDelegate.swift */,
-				811CE6F01CCBFEC100F64E25 /* GraphsVC.swift */,
-				811CE6F21CCC02E300F64E25 /* BubbleExample.swift */,
-				811CE6F61CCC036C00F64E25 /* Env.swift */,
-				811CE6F41CCC030200F64E25 /* ExamplesDefaults.swift */,
+				811CE6E11CCBC4D700F64E25 /* AR */,
+				811CE6FA1CCC116700F64E25 /* Graphs */,
 				811CE6C51CCB3D9C00F64E25 /* ViewController.swift */,
-				811CE6E41CCBC54C00F64E25 /* DebugMapViewController.xib */,
 				811CE6C71CCB3D9C00F64E25 /* Main.storyboard */,
 				811CE6EA1CCBE3D100F64E25 /* MapVC.swift */,
 				811CE6EC1CCBE5D500F64E25 /* Pin.swift */,
@@ -131,6 +127,7 @@
 		811CE6E11CCBC4D700F64E25 /* AR */ = {
 			isa = PBXGroup;
 			children = (
+				811CE6E41CCBC54C00F64E25 /* DebugMapViewController.xib */,
 				811CE6E21CCBC54400F64E25 /* DebugMapViewController.swift */,
 				811CE6DB1CCBC4AC00F64E25 /* ARTrackingManager.swift */,
 				811CE6D71CCBC4A200F64E25 /* ARAnnotationView.swift */,
@@ -140,6 +137,17 @@
 				811CE6DF1CCBC4D100F64E25 /* TestAnnotationView.swift */,
 			);
 			name = AR;
+			sourceTree = "<group>";
+		};
+		811CE6FA1CCC116700F64E25 /* Graphs */ = {
+			isa = PBXGroup;
+			children = (
+				811CE6F21CCC02E300F64E25 /* BubbleExample.swift */,
+				811CE6F01CCBFEC100F64E25 /* GraphsVC.swift */,
+				811CE6F61CCC036C00F64E25 /* Env.swift */,
+				811CE6F41CCC030200F64E25 /* ExamplesDefaults.swift */,
+			);
+			name = Graphs;
 			sourceTree = "<group>";
 		};
 		F0CC37D1B93587F162E17F26 /* Frameworks */ = {

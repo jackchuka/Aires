@@ -22,7 +22,6 @@ class ProfileVC: UIViewController {
             .responseJSON { _, _, result in
                 print(result)
                 print(result.data)
-                print(result.data)
                 debugPrint(result)
         }
 
@@ -64,12 +63,7 @@ class ProfileVC: UIViewController {
                 if jsonObj != JSON.null {
                     let dict = jsonObj.dictionary!
                     for key in dict.keys {
-                        let description = dict[key]!["description"]
-                        let image = dict[key]!["image"]
-                        let offertitle = dict[key]!["title_offer"]
-                        let offercost = dict[key]!["offer_cost"]
-                        let offerimage = dict[key]!["image_offer"]
-                        
+    
                     }
                     print("jsonData:\(jsonObj)")
                 } else {

@@ -22,7 +22,7 @@ class BubbleExample: UIViewController {
         super.viewDidLoad()
         
         let frame = ExamplesDefaults.chartFrame(self.view.bounds)
-        let chartFrame = CGRectMake(frame.origin.x, frame.origin.y, frame.size.width, frame.size.height - colorBarHeight-200)
+        let chartFrame = CGRectMake(frame.origin.x, frame.origin.y, frame.size.width, frame.size.height - colorBarHeight-50)
         let colorBar = ColorBar(frame: CGRectMake(0, chartFrame.origin.y + chartFrame.size.height, self.view.frame.size.width, self.colorBarHeight), c1: UIColor.redColor(), c2: UIColor.greenColor())
         self.view.addSubview(colorBar)
         
