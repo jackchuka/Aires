@@ -23,7 +23,6 @@
 		811CE6E71CCBCE2E00F64E25 /* CardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 811CE6E61CCBCE2E00F64E25 /* CardCell.swift */; };
 		811CE6E91CCBDEDB00F64E25 /* CardCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 811CE6E81CCBDEDB00F64E25 /* CardCell.xib */; };
 		811CE6EB1CCBE3D100F64E25 /* MapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 811CE6EA1CCBE3D100F64E25 /* MapVC.swift */; };
-		811CE6ED1CCBE5D500F64E25 /* Pin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 811CE6EC1CCBE5D500F64E25 /* Pin.swift */; };
 		811CE6EF1CCBF5BE00F64E25 /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 811CE6EE1CCBF5BE00F64E25 /* ProfileVC.swift */; };
 		811CE6F11CCBFEC100F64E25 /* GraphsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 811CE6F01CCBFEC100F64E25 /* GraphsVC.swift */; };
 		811CE6F31CCC02E300F64E25 /* BubbleExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 811CE6F21CCC02E300F64E25 /* BubbleExample.swift */; };
@@ -55,7 +54,6 @@
 		811CE6E61CCBCE2E00F64E25 /* CardCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardCell.swift; sourceTree = "<group>"; };
 		811CE6E81CCBDEDB00F64E25 /* CardCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CardCell.xib; sourceTree = "<group>"; };
 		811CE6EA1CCBE3D100F64E25 /* MapVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapVC.swift; sourceTree = "<group>"; };
-		811CE6EC1CCBE5D500F64E25 /* Pin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pin.swift; sourceTree = "<group>"; };
 		811CE6EE1CCBF5BE00F64E25 /* ProfileVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
 		811CE6F01CCBFEC100F64E25 /* GraphsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GraphsVC.swift; path = ../GraphsVC.swift; sourceTree = "<group>"; };
 		811CE6F21CCC02E300F64E25 /* BubbleExample.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BubbleExample.swift; sourceTree = "<group>"; };
@@ -117,7 +115,6 @@
 				811CE6C71CCB3D9C00F64E25 /* Main.storyboard */,
 				811CE6FD1CCC241200F64E25 /* SelectionVC.swift */,
 				811CE6EA1CCBE3D100F64E25 /* MapVC.swift */,
-				811CE6EC1CCBE5D500F64E25 /* Pin.swift */,
 				811CE6E61CCBCE2E00F64E25 /* CardCell.swift */,
 				811CE6E81CCBDEDB00F64E25 /* CardCell.xib */,
 				811CE6EE1CCBF5BE00F64E25 /* ProfileVC.swift */,
@@ -294,7 +291,6 @@
 				811CE6FC1CCC232600F64E25 /* DetailVC.swift in Sources */,
 				811CE6E01CCBC4D100F64E25 /* TestAnnotationView.swift in Sources */,
 				811CE6C61CCB3D9C00F64E25 /* ViewController.swift in Sources */,
-				811CE6ED1CCBE5D500F64E25 /* Pin.swift in Sources */,
 				811CE6D61CCBC49E00F64E25 /* ARAnnotation.swift in Sources */,
 				811CE6D81CCBC4A200F64E25 /* ARAnnotationView.swift in Sources */,
 				811CE6EB1CCBE3D100F64E25 /* MapVC.swift in Sources */,
