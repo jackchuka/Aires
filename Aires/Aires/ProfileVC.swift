@@ -11,6 +11,7 @@ import Alamofire
 
 
 class ProfileVC: UIViewController {
+    let url = "http://masanoriuehara.com/api/aircheck/";
     
     let types = ["Cough", "Wheezing", "Sneezing", "Itchy Eyes"]
     let colors = []
@@ -18,11 +19,20 @@ class ProfileVC: UIViewController {
     override func viewDidLoad() {
         self.tableview.registerNib(UINib(nibName: "CardCell", bundle: nil), forCellReuseIdentifier: "cell")
         
-        Alamofire.request(.GET, "http://masanoriuehara.com/api/aircheck/")
-            .responseJSON { _, _, result in
-                print(result)
-                print(result.data)
-                debugPrint(result)
+
+        let params = [
+            "user_id" : 1,
+            "func" : "userTimeline"
+        ];
+        
+        Alamofire.request(.GET, url, parameters: params, encoding: ParameterEncoding.URL).responseJSON { (_, _, result) in
+            switch result {
+            case .Success(let data):
+                let json = JSON(data)
+                print(json)
+            case .Failure(_, let error):
+                print("Request failed with error: \(error)")
+            }
         }
 
         
