@@ -17,18 +17,16 @@ class ProfileVC: UIViewController {
     @IBOutlet weak var tableview: UITableView!
     override func viewDidLoad() {
         self.tableview.registerNib(UINib(nibName: "CardCell", bundle: nil), forCellReuseIdentifier: "cell")
-        Alamofire.request(.GET, "https://httpbin.org/get", parameters: ["foo": "bar"])
-            .responseJSON { response in
-                print(response.request)  // original URL request
-                print(response.response) // URL response
-                print(response.data)     // server data
-                print(response.result)   // result of response serialization
-                
-                if let JSON = response.result.value {
-                    print("JSON: \(JSON)")
-                }
+        
+        Alamofire.request(.GET, "http://masanoriuehara.com/api/aircheck/")
+            .responseJSON { _, _, result in
+                print(result)
+                print(result.data)
+                print(result.data)
+                debugPrint(result)
         }
 
+        
     }
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
@@ -57,5 +55,33 @@ class ProfileVC: UIViewController {
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         return 125.0
     }
+    /*
+    func parse() {
+        
+            do {
+                let data = try NSData(contentsOfURL: NSURL(fileURLWithPath: path), options: NSDataReadingOptions.DataReadingMappedIfSafe)
+                let jsonObj = JSON(data: data)
+                if jsonObj != JSON.null {
+                    let dict = jsonObj.dictionary!
+                    for key in dict.keys {
+                        let description = dict[key]!["description"]
+                        let image = dict[key]!["image"]
+                        let offertitle = dict[key]!["title_offer"]
+                        let offercost = dict[key]!["offer_cost"]
+                        let offerimage = dict[key]!["image_offer"]
+                        
+                    }
+                    print("jsonData:\(jsonObj)")
+                } else {
+                    print("could not get json from file, make sure that file contains valid json.")
+                }
+            } catch let error as NSError {
+                print(error.localizedDescription)
+            }
+      
+    }
+*/
+    
+
    
 }
