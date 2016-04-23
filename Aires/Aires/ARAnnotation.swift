@@ -14,6 +14,7 @@ public class ARAnnotation: NSObject
 {
     /// Title of annotation
     public var title: String?
+    public var rating: String?
     /// Location of annotation
     public var location: CLLocation?
     /// View for annotation. It is set inside ARViewController after fetching view from dataSource.

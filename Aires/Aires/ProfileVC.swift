@@ -22,7 +22,7 @@ class ProfileVC: UIViewController {
     
     override func viewDidLoad() {
         self.tableview.registerNib(UINib(nibName: "CardCell", bundle: nil), forCellReuseIdentifier: "cell")
-    
+
         let params = [
             "user_id" : 1,
             "func" : "timeline"
@@ -65,15 +65,28 @@ class ProfileVC: UIViewController {
         
         let cough = self.json[indexPath.row]["cough"].rawString()
         print (cough)
-        cell.title.text = "Cough"
-        cell.title.textColor = UIColor.blueColor()
-        cell.decrip.text = "Rating of \(self.json[indexPath.row]["cough"]) out of 10"
+        cell.symptomname.text = "Cough"
+        cell.symptomname.textColor = UIColor.blueColor()
+        cell.rating.text = "Rating of \(self.json[indexPath.row]["cough"]) out of 10"
         cell.date.text = self.json[indexPath.row]["datetime"].rawString()
-        cell.coord.text = "\(self.json[indexPath.row]["latitude"].rawString()!) : \(self.json[indexPath.row]["longitude"].rawString()!)"
-        
+        //cell.coord.text = "\(self.json[indexPath.row]["latitude"].rawString()!) : \(self.json[indexPath.row]["longitude"].rawString()!)"
         return cell
         
     }
+   
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
+        self.performSegueWithIdentifier("detail", sender: self)
+        
+    }
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+        let vc: SelectionVC = segue.destinationViewController as! SelectionVC
+        //vc.descriptext = descriptionsarray[currentindex]
+        
+    }
+
+    
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         return 125.0
     }
@@ -86,12 +99,7 @@ class ProfileVC: UIViewController {
                 if jsonObj != JSON.null {
                     let dict = jsonObj.dictionary!
                     for key in dict.keys {
-                        let description = dict[key]!["description"]
-                        let image = dict[key]!["image"]
-                        let offertitle = dict[key]!["title_offer"]
-                        let offercost = dict[key]!["offer_cost"]
-                        let offerimage = dict[key]!["image_offer"]
-                        
+    
                     }
                     print("jsonData:\(jsonObj)")
                 } else {
@@ -103,7 +111,12 @@ class ProfileVC: UIViewController {
       
     }
 */
+    @IBAction func unwindToMap(segue: UIStoryboardSegue) {
+
+    }
     
+    
+
 
    
 }

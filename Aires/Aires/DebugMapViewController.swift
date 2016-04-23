@@ -32,7 +32,7 @@ public class DebugMapViewController: UIViewController, MKMapViewDelegate, CLLoca
     {
         super.viewDidLoad()
         self.mapView.rotateEnabled = false
-        
+    
         if let annotations = self.annotations
         {
             addAnnotationsOnMap(annotations)

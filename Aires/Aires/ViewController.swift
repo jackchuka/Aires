@@ -31,8 +31,8 @@ class ViewController: UIViewController, ARDataSource
         
         // Create random annotations around center point    //@TODO
         //FIXME: set your initial position here, this is used to generate random POIs
-        let lat = 45.558054
-        let lon = 18.682622
+        let lat = 33.6839
+        let lon = -117.8222222
         let delta = 0.05
         let count = 50
         let dummyAnnotations = self.getDummyAnnotations(centerLatitude: lat, centerLongitude: lon, delta: delta, count: count)
@@ -46,10 +46,21 @@ class ViewController: UIViewController, ARDataSource
         arViewController.maxVerticalLevel = 5
         arViewController.trackingManager.userDistanceFilter = 25
         arViewController.trackingManager.reloadDistanceFilter = 75
-        arViewController.setAnnotations(dummyAnnotations)
+        
+        ///////////////
+        var annotations: [ARAnnotation] = []
+        let annotation1 = ARAnnotation()
+        annotation1.location = self.getRandomLocation(centerLatitude: 33.6839, centerLongitude: -117.8222222, delta: delta)
+        annotation1.title = "POI"
+        annotations.append(annotation1)
+
+        arViewController.setAnnotations(annotations)
+        /////////////
+        
         self.presentViewController(arViewController, animated: true, completion: nil)
     }
     
+   
     /// This method is called by ARViewController, make sure to set dataSource property.
     func ar(arViewController: ARViewController, viewForAnnotation: ARAnnotation) -> ARAnnotationView
     {

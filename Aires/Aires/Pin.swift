@@ -14,12 +14,12 @@ class Pin: NSObject, MKAnnotation{
     var title: String?
     var coordinate: CLLocationCoordinate2D
     var info: String
-    //var color:UIColor
+    var color:MKPinAnnotationColor
     
-    init(title: String, coordinate: CLLocationCoordinate2D, info: String) {
+    init(title: String, coordinate: CLLocationCoordinate2D, info: String, color: MKPinAnnotationColor) {
         self.title = title
         self.coordinate = coordinate
         self.info = info
-        //self.color = color
+        self.color = color
     }
 }

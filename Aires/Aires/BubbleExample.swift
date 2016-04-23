@@ -22,7 +22,7 @@ class BubbleExample: UIViewController {
         super.viewDidLoad()
         
         let frame = ExamplesDefaults.chartFrame(self.view.bounds)
-        let chartFrame = CGRectMake(frame.origin.x, frame.origin.y, frame.size.width, frame.size.height - colorBarHeight-200)
+        let chartFrame = CGRectMake(frame.origin.x, frame.origin.y, frame.size.width, frame.size.height - colorBarHeight-50)
         let colorBar = ColorBar(frame: CGRectMake(0, chartFrame.origin.y + chartFrame.size.height, self.view.frame.size.width, self.colorBarHeight), c1: UIColor.redColor(), c2: UIColor.greenColor())
         self.view.addSubview(colorBar)
         
@@ -62,11 +62,11 @@ class BubbleExample: UIViewController {
         
         let chartPoints: [ChartPointBubble] = rawData.map{ChartPointBubble(x: ChartAxisValueDouble($0, labelSettings: labelSettings), y: ChartAxisValueDouble($1), diameterScalar: $2, bgColor: $3)}
         
-        let xValues = (-2).stride(through: 14, by: 2).map {ChartAxisValueInt($0, labelSettings: labelSettings)}
-        let yValues = (-2).stride(through: 12, by: 2).map {ChartAxisValueInt($0, labelSettings: labelSettings)}
+        let xValues = (0).stride(through: 7, by: 1).map {ChartAxisValueInt($0, labelSettings: labelSettings)}
+        let yValues = (0).stride(through: 12, by: 2).map {ChartAxisValueInt($0, labelSettings: labelSettings)}
         
-        let xModel = ChartAxisModel(axisValues: xValues, axisTitleLabel: ChartAxisLabel(text: "Axis title", settings: labelSettings))
-        let yModel = ChartAxisModel(axisValues: yValues, axisTitleLabel: ChartAxisLabel(text: "Axis title", settings: labelSettings.defaultVertical()))
+        let xModel = ChartAxisModel(axisValues: xValues, axisTitleLabel: ChartAxisLabel(text: "Time (days)", settings: labelSettings))
+        let yModel = ChartAxisModel(axisValues: yValues, axisTitleLabel: ChartAxisLabel(text: "Distance (miles)", settings: labelSettings.defaultVertical()))
         
         let coordsSpace = ChartCoordsSpaceLeftBottomSingleAxis(chartSettings: ExamplesDefaults.chartSettings, chartFrame: chartFrame, xModel: xModel, yModel: yModel)
         let (xAxis, yAxis, innerFrame) = (coordsSpace.xAxis, coordsSpace.yAxis, coordsSpace.chartInnerFrame)
@@ -76,16 +76,12 @@ class BubbleExample: UIViewController {
         let guidelinesLayerSettings = ChartGuideLinesDottedLayerSettings(linesColor: UIColor.blackColor(), linesWidth: ExamplesDefaults.guidelinesWidth)
         let guidelinesLayer = ChartGuideLinesDottedLayer(xAxis: xAxis, yAxis: yAxis, innerFrame: innerFrame, settings: guidelinesLayerSettings)
         
-        let guidelinesHighlightLayerSettings = ChartGuideLinesDottedLayerSettings(linesColor: UIColor.redColor(), linesWidth: 1, dotWidth: 4, dotSpacing: 4)
-        let guidelinesHighlightLayer = ChartGuideLinesForValuesDottedLayer(xAxis: xAxis, yAxis: yAxis, innerFrame: innerFrame, settings: guidelinesHighlightLayerSettings, axisValuesX: [ChartAxisValueDouble(0)], axisValuesY: [ChartAxisValueDouble(0)])
-        
         let chart = Chart(
             frame: chartFrame,
             layers: [
                 xAxis,
                 yAxis,
                 guidelinesLayer,
-                guidelinesHighlightLayer,
                 bubbleLayer
             ]
         )
