@@ -23,9 +23,7 @@ class ProfileVC: UIViewController {
     
     override func viewDidLoad() {
         self.tableview.registerNib(UINib(nibName: "CardCell", bundle: nil), forCellReuseIdentifier: "cell")
-        //self.backgroundColor = UIColor(red: 0.12, green: 0.12, blue: 0.12, alpha: 1)
 
-        //self.tableview.contentOffset =
         let params = [
             "func" : "timeline"
         ];
@@ -61,7 +59,7 @@ class ProfileVC: UIViewController {
         let cell : CardCell = tableView.dequeueReusableCellWithIdentifier("cell") as! CardCell
         // Configure the cell...
         
-        // TODO: find worst symptom and display
+        // TODO: find worst symptom and disply
         
         let cough = self.json[indexPath.row]["cough"].rawString()!
         cell.symptomname.text = "Cough"
@@ -69,7 +67,6 @@ class ProfileVC: UIViewController {
         cell.rating.text = "Rating of \(cough) out of 10"
         cell.date.text = self.json[indexPath.row]["datetime"].rawString()!
         cell.location.text = "\(self.json[indexPath.row]["latitude"].rawString()!) : \(self.json[indexPath.row]["longitude"].rawString()!)"
-
         return cell
         
     }
