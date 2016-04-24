@@ -67,7 +67,6 @@ class DetailVC: UIViewController {
             Int(self.json["nasal"].rawString()!)!,
             Int(self.json["itchyeyes"].rawString()!)!
         ]
-        print(barChart.yValues)
         barChart.strokeChart()
         
         self.view.addSubview(barChart)
