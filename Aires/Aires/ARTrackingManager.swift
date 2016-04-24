@@ -157,6 +157,7 @@ public class ARTrackingManager: NSObject, CLLocationManagerDelegate
     {
         self.heading = fmod(newHeading.trueHeading, 360.0)
         self.delegate?.logText?("Heading: \(self.heading)")
+  
     }
     
     public func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation])

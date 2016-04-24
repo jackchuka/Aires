@@ -1,13 +1,25 @@
 PODS:
   - Alamofire (2.0.2)
+  - PNChartSwift (0.0.2)
   - SwiftCharts (0.3)
 
 DEPENDENCIES:
   - Alamofire (~> 2.0.2)
+  - PNChartSwift (from `https://github.com/kevinzhow/PNChart-Swift.git`)
   - SwiftCharts (~> 0.2)
+
+EXTERNAL SOURCES:
+  PNChartSwift:
+    :git: https://github.com/kevinzhow/PNChart-Swift.git
+
+CHECKOUT OPTIONS:
+  PNChartSwift:
+    :commit: 88eb8bcb4cd415d02775b2d355542b8bd338712d
+    :git: https://github.com/kevinzhow/PNChart-Swift.git
 
 SPEC CHECKSUMS:
   Alamofire: 8edbab00802a752bb5240cc2abe70e7e881488ad
+  PNChartSwift: bcdfbffd65920072463eff42d0dfb46189bf4495
   SwiftCharts: c66a449d58f9c811c467f865a47b1b6136b49499
 
 COCOAPODS: 0.39.0

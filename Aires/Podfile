@@ -6,5 +6,6 @@ use_frameworks!
 target 'Aires' do
     pod 'SwiftCharts', '~> 0.2'
     pod 'Alamofire', '~> 2.0.2'
+    pod 'PNChartSwift',:git => 'https://github.com/kevinzhow/PNChart-Swift.git'
 end
 

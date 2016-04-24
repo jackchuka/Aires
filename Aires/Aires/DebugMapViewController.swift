@@ -18,11 +18,12 @@ public class DebugMapViewController: UIViewController, MKMapViewDelegate, CLLoca
     private var heading: Double = 0
     private var interactionInProgress = false
     
+    
     public override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?)
     {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
     }
-    
+
     required public init?(coder aDecoder: NSCoder)
     {
         super.init(coder: aDecoder)
