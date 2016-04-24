@@ -17,22 +17,22 @@ class DetailVC: UIViewController {
     let url = "http://masanoriuehara.com/api/aircheck/";
     
     var json = JSON([])
-    var user_id: String!
+    var timeline_id: String!
     
     override func viewDidLoad() {
         
-        print(self.user_id)
+        print(self.timeline_id)
         
         let params = [
-            "user_id" : self.user_id,
-            "func" : "userTimeline",
-            "limit" : 1
+            "timeline_id" : self.timeline_id,
+            "func" : "timelineid"
         ];
         
-        Alamofire.request(.GET, url, parameters: params as? [String : AnyObject], encoding: ParameterEncoding.URL).responseJSON { (_, _, result) in
+        Alamofire.request(.GET, url, parameters: params, encoding: ParameterEncoding.URL).responseJSON { (_, _, result) in
             switch result {
             case .Success(let data):
                 self.json = JSON(data)
+                print(self.json)
                 
                 self.displayDetails()
                 
@@ -45,7 +45,7 @@ class DetailVC: UIViewController {
     
     func displayDetails() {
         
-        self.nameText.text = self.json[0]["user_name"].rawString()
+        self.nameText.text = self.json["user_name"].rawString()
         
         self.createBarChart()
         
@@ -53,6 +53,24 @@ class DetailVC: UIViewController {
     
     func createBarChart() {
         
+        let barChart = PNBarChart(frame: CGRectMake(0, 470.0, self.view.frame.width, 200.0))
+        barChart.animationType = .Waterfall
+        
+        barChart.labelMarginTop = 5.0
+        barChart.xLabels = ["cough", "breath", "wheezing", "sneezing", "nasal", "itchy eyes"]
+        barChart.yMaxValue = 10.0
+        barChart.yValues = [
+            Int(self.json["cough"].rawString()!)!,
+            Int(self.json["breath"].rawString()!)!,
+            Int(self.json["wheezing"].rawString()!)!,
+            Int(self.json["sneezing"].rawString()!)!,
+            Int(self.json["nasal"].rawString()!)!,
+            Int(self.json["itchyeyes"].rawString()!)!
+        ]
+        print(barChart.yValues)
+        barChart.strokeChart()
+        
+        self.view.addSubview(barChart)
     }
     
 }
