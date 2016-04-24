@@ -80,12 +80,15 @@
             <objects>
                 <tableViewController id="koF-z9-r7N" customClass="SelectionVC" customModule="Aires" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="b91-oB-wR2">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="jhS-tB-i9n">
+                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="jhS-tB-i9n" id="T87-eq-F4U">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
@@ -112,6 +115,7 @@
                         <viewControllerLayoutGuide type="bottom" id="ukA-Ex-zje"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="3ka-Jp-xav">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile" translatesAutoresizingMaskIntoConstraints="NO" id="iqa-Ym-qx7">
@@ -181,124 +185,34 @@
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="l91-4K-Qp8">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                             </mapView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xx0-FY-nfF">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" title="Cough"/>
-                                <connections>
-                                    <action selector="coughPressed:" destination="PMe-t6-rpC" eventType="touchUpInside" id="WTw-Rh-h1Z"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eom-5h-Hrg">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" title="Breath"/>
-                                <connections>
-                                    <action selector="breathPressed:" destination="PMe-t6-rpC" eventType="touchUpInside" id="YBF-bu-s1A"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zTZ-vq-BCr">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" title="Wheezing"/>
-                                <connections>
-                                    <action selector="wheezePressed:" destination="PMe-t6-rpC" eventType="touchUpInside" id="2Ay-ZM-DEw"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ao7-vC-Hpy">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" title="Sneezing"/>
-                                <connections>
-                                    <action selector="sneezingPressed:" destination="PMe-t6-rpC" eventType="touchUpInside" id="U7y-fb-gGs"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kb0-ZS-332">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" title="Nasal Obstruction"/>
-                                <connections>
-                                    <action selector="nasalObstruction:" destination="PMe-t6-rpC" eventType="touchUpInside" id="hcv-cd-Lif"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bjv-61-l2J">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" title="Itchy Eyes"/>
-                                <connections>
-                                    <action selector="itchyEyes:" destination="PMe-t6-rpC" eventType="touchUpInside" id="pgj-sK-l5F"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="l91-4K-Qp8" firstAttribute="bottom" secondItem="aC8-Dy-21C" secondAttribute="top" id="8sU-WT-gy8"/>
-                            <constraint firstItem="zTZ-vq-BCr" firstAttribute="baseline" secondItem="eom-5h-Hrg" secondAttribute="baseline" id="AHB-Oa-9Ua"/>
-                            <constraint firstAttribute="trailing" secondItem="l91-4K-Qp8" secondAttribute="trailing" id="Cnq-9w-uuR"/>
-                            <constraint firstItem="xx0-FY-nfF" firstAttribute="top" secondItem="5gc-u0-mKH" secondAttribute="bottom" constant="8" symbolic="YES" id="N24-OY-rXx"/>
-                            <constraint firstItem="eom-5h-Hrg" firstAttribute="baseline" secondItem="xx0-FY-nfF" secondAttribute="baseline" id="N4d-E0-ncc"/>
-                            <constraint firstItem="kb0-ZS-332" firstAttribute="baseline" secondItem="ao7-vC-Hpy" secondAttribute="baseline" id="OTA-IR-f9y"/>
-                            <constraint firstItem="kb0-ZS-332" firstAttribute="leading" secondItem="xx0-FY-nfF" secondAttribute="leading" id="YdO-h0-zNM"/>
-                            <constraint firstItem="ao7-vC-Hpy" firstAttribute="baseline" secondItem="bjv-61-l2J" secondAttribute="baseline" id="YhT-2a-ux7"/>
-                            <constraint firstItem="l91-4K-Qp8" firstAttribute="top" secondItem="kb0-ZS-332" secondAttribute="bottom" constant="38" id="gFu-GA-ZmQ"/>
-                            <constraint firstItem="bjv-61-l2J" firstAttribute="leading" secondItem="ao7-vC-Hpy" secondAttribute="trailing" constant="47" id="lPH-yK-DT9"/>
-                            <constraint firstItem="kb0-ZS-332" firstAttribute="top" secondItem="xx0-FY-nfF" secondAttribute="bottom" constant="17" id="ozB-cW-O6f"/>
-                            <constraint firstItem="ao7-vC-Hpy" firstAttribute="leading" secondItem="eom-5h-Hrg" secondAttribute="leading" id="r40-ug-0Bd"/>
-                            <constraint firstItem="l91-4K-Qp8" firstAttribute="leading" secondItem="VmG-4r-5Ty" secondAttribute="leading" id="ucy-bZ-LGb"/>
-                            <constraint firstItem="ao7-vC-Hpy" firstAttribute="leading" secondItem="kb0-ZS-332" secondAttribute="trailing" constant="17" id="v3G-if-poJ"/>
-                            <constraint firstItem="zTZ-vq-BCr" firstAttribute="trailing" secondItem="bjv-61-l2J" secondAttribute="trailing" id="vH2-HS-fFK"/>
-                            <constraint firstItem="xx0-FY-nfF" firstAttribute="leading" secondItem="VmG-4r-5Ty" secondAttribute="leadingMargin" id="vQP-S3-VIc"/>
+                            <constraint firstAttribute="trailing" secondItem="l91-4K-Qp8" secondAttribute="trailing" id="5DB-1U-dqX"/>
+                            <constraint firstItem="l91-4K-Qp8" firstAttribute="top" secondItem="5gc-u0-mKH" secondAttribute="bottom" id="EHU-DX-UnA"/>
+                            <constraint firstItem="l91-4K-Qp8" firstAttribute="leading" secondItem="VmG-4r-5Ty" secondAttribute="leading" id="j44-xF-lUz"/>
+                            <constraint firstItem="l91-4K-Qp8" firstAttribute="bottom" secondItem="aC8-Dy-21C" secondAttribute="top" id="tCI-p7-G8a"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="l91-4K-Qp8"/>
-                                <exclude reference="xx0-FY-nfF"/>
-                                <exclude reference="eom-5h-Hrg"/>
-                                <exclude reference="zTZ-vq-BCr"/>
-                                <exclude reference="ao7-vC-Hpy"/>
-                                <exclude reference="kb0-ZS-332"/>
-                                <exclude reference="bjv-61-l2J"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="N24-OY-rXx"/>
-                                <exclude reference="vQP-S3-VIc"/>
-                                <exclude reference="OTA-IR-f9y"/>
-                                <exclude reference="YdO-h0-zNM"/>
-                                <exclude reference="ozB-cW-O6f"/>
-                                <exclude reference="N4d-E0-ncc"/>
-                                <exclude reference="8sU-WT-gy8"/>
-                                <exclude reference="Cnq-9w-uuR"/>
-                                <exclude reference="gFu-GA-ZmQ"/>
-                                <exclude reference="ucy-bZ-LGb"/>
-                                <exclude reference="YhT-2a-ux7"/>
-                                <exclude reference="r40-ug-0Bd"/>
-                                <exclude reference="v3G-if-poJ"/>
-                                <exclude reference="AHB-Oa-9Ua"/>
-                                <exclude reference="vH2-HS-fFK"/>
-                                <exclude reference="lPH-yK-DT9"/>
+                                <exclude reference="5DB-1U-dqX"/>
+                                <exclude reference="EHU-DX-UnA"/>
+                                <exclude reference="j44-xF-lUz"/>
+                                <exclude reference="tCI-p7-G8a"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
                                 <include reference="l91-4K-Qp8"/>
-                                <include reference="xx0-FY-nfF"/>
-                                <include reference="eom-5h-Hrg"/>
-                                <include reference="zTZ-vq-BCr"/>
-                                <include reference="ao7-vC-Hpy"/>
-                                <include reference="kb0-ZS-332"/>
-                                <include reference="bjv-61-l2J"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="N24-OY-rXx"/>
-                                <include reference="vQP-S3-VIc"/>
-                                <include reference="OTA-IR-f9y"/>
-                                <include reference="YdO-h0-zNM"/>
-                                <include reference="ozB-cW-O6f"/>
-                                <include reference="N4d-E0-ncc"/>
-                                <include reference="8sU-WT-gy8"/>
-                                <include reference="Cnq-9w-uuR"/>
-                                <include reference="gFu-GA-ZmQ"/>
-                                <include reference="ucy-bZ-LGb"/>
-                                <include reference="YhT-2a-ux7"/>
-                                <include reference="r40-ug-0Bd"/>
-                                <include reference="v3G-if-poJ"/>
-                                <include reference="AHB-Oa-9Ua"/>
-                                <include reference="vH2-HS-fFK"/>
-                                <include reference="lPH-yK-DT9"/>
+                                <include reference="5DB-1U-dqX"/>
+                                <include reference="EHU-DX-UnA"/>
+                                <include reference="j44-xF-lUz"/>
+                                <include reference="tCI-p7-G8a"/>
                             </mask>
                         </variation>
                     </view>
