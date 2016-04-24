@@ -85,9 +85,11 @@ strip_invalid_archs() {
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods-Aires/Alamofire.framework"
+  install_framework "Pods-Aires/PNChartSwift.framework"
   install_framework "Pods-Aires/SwiftCharts.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods-Aires/Alamofire.framework"
+  install_framework "Pods-Aires/PNChartSwift.framework"
   install_framework "Pods-Aires/SwiftCharts.framework"
 fi
