@@ -76,7 +76,7 @@ class ProfileVC: UIViewController {
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
-        selected = self.json[indexPath.row]["user_id"].rawString()
+        selected = self.json[indexPath.row]["id"].rawString()
         self.performSegueWithIdentifier("detail", sender: self)
         
     }
@@ -84,7 +84,7 @@ class ProfileVC: UIViewController {
         
         if(segue.identifier == "detail"){
             let vc: DetailVC = segue.destinationViewController as! DetailVC
-            vc.user_id = selected
+            vc.timeline_id = selected
         }else{
             let vc: SelectionVC = segue.destinationViewController as! SelectionVC
 
